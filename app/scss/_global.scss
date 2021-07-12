@@ -13,5 +13,59 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
+	color: $grayishBlue;
 	font-family: 'Public Sans', sans-serif;
+	font-weight: 300;
+	font-size: $font-medium; // 18px
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+// flexbox styles
+.flex {
+	display: flex;
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// Buttons
+
+button,
+.button {
+	padding: 0.875rem 2.1875rem;
+	border-radius: 50px;
+	background: linear-gradient(to right, $limeGreen, $brightCyan);
+	border: 0;
+	color: $white;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+// visibility
+.hide-for-mobile {
+	// hide for tablet and mobile
+	@include breakpoint-down(medium) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	// hide for desktop viewport widths
+	@include breakpoint-up(large) {
+		display: none;
+	}
 }
