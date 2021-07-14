@@ -1,4 +1,19 @@
 .header {
+	// hamburger open styles
+	&.open {
+		.header__menu {
+			> span:first-child {
+				transform: rotate(45deg);
+			}
+			> span:nth-child(2) {
+				opacity: 0;
+			}
+			> span:last-child {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
 	nav {
 		padding: 1.0625rem 1.5rem;
 	}
@@ -11,13 +26,16 @@
 	//mobile menu
 	&__menu {
 		> span {
+			z-index: 1;
 			display: block;
 			width: 26px;
 			height: 2px;
 			background-color: $darkBlue;
+			transform-origin: 3px 1px;
+			transition: all 0.3s ease-in-out;
 
 			&:not(:last-child) {
-				margin-bottom: 3px;
+				margin-bottom: 5px;
 			}
 		}
 	}
@@ -64,5 +82,16 @@
 		&:hover {
 			opacity: 0.7;
 		}
+	}
+
+	.overlay {
+		visibility: hidden;
+		position: fixed;
+		top: 3.75rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $darkBlue;
+		background: linear-gradient($darkBlue, transparent);
 	}
 }
