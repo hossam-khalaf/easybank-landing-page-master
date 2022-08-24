@@ -11,7 +11,7 @@
 *.xd
 *.fig
 design
-README.md
+
 README-template.md
 style-guide.md
 # Avoid your project being littered with annoying .DS_Store files!
