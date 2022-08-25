@@ -16,4 +16,41 @@ body {
 	padding: 0;
 	line-height: 1.2;
 	font-family: 'Public Sans', sans-serif;
+	font-size: $font-medium;
+	color: $grayishBlue;
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+// flexbox helper classes
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// buttons
+button,
+.button {
+	padding: 1rem 1.875rem;
+	border-radius: 50px;
+	cursor: pointer;
+	background: linear-gradient(to right, $limeGreen, $brightCyan);
+	border: none;
+	color: $white;
+	font-weight: 700;
 }
