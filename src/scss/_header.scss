@@ -17,7 +17,7 @@
 
 	.overlay {
 		z-index: -1;
-		position: fixed;
+		position: absolute;
 		top: 60px;
 		left: 0;
 		right: 0;
@@ -61,13 +61,20 @@
 		top: 5rem;
 		transform: translate(-50%, 0);
 		visibility: hidden;
-		// display: none;
+		box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.096);
 
 		a {
 			color: $darkBlue;
 			padding: 0.625rem;
 			display: block;
 			text-align: center;
+			border-radius: 8px;
+
+			&:hover {
+				background: linear-gradient(to right, $limeGreen, $brightCyan);
+				color: $white;
+				transition: all 200ms ease-in-out;
+			}
 		}
 	}
 	.show {

@@ -11,5 +11,6 @@ hamburgerBtn.addEventListener('click', () => {
 	overlay.classList.toggle('overlay')
 	overlay.classList.toggle('fade-in')
 	mobileMenu.classList.toggle('show')
-	mobileMenu.classList.toggle('fade-in')
+
+	document.body.classList.toggle('noscroll')
 })

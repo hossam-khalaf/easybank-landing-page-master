@@ -18,6 +18,10 @@ body {
 	font-family: 'Public Sans', sans-serif;
 	font-size: $font-medium;
 	color: $grayishBlue;
+
+	&.noscroll {
+		overflow: hidden;
+	}
 }
 
 a,
