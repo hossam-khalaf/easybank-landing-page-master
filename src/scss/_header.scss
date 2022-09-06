@@ -16,13 +16,13 @@
 	}
 
 	.overlay {
-		z-index: -1;
+		z-index: 1;
 		position: absolute;
-		top: 60px;
+		top: 55px;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(to bottom, $darkBlue, $white);
+		background: linear-gradient(to bottom, rgba($darkBlue, 0.8), $white);
 	}
 	nav {
 		padding-top: 1.063rem;
@@ -52,6 +52,7 @@
 	}
 
 	&__mobile-menu {
+		z-index: 2;
 		background: $white;
 		padding: 1.625rem;
 		border-radius: 5px;
